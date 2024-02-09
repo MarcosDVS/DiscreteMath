@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IEEE 754 Calculator</title>
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html">Decimales/Binarios</a>
+        <a href="octal.html">Octales/Hexadecimales</a>
+        <a href="IEEE.html" class="active">IEEE 754 (32 bits)/IEEE 754 (64 bits)</a>
+    </nav>
+    <br>
+    <div class="calculator">
+        <br>
+        <h2>IEEE 754 Binary (32 bits)</h2>
+        <label for="ieeeInput">IEEE 754 Binary (32 bits):</label>
+        <br>
+        <input type="text" id="ieeeInput" maxlength="32" placeholder="Enter binary">
+        <button onclick="convertToDecimal()">Convert to Decimal</button>
+        <p id="result">Decimal Result: </p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
