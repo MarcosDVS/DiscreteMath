@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="menuStyle.css">
+    <title>Discrete Math</title>
+</head>
+<body>
+    <nav class="menu">
+        <a href="suma.html" class="active">Sum</a>
+        <a href="subtract.html">Subtract</a>
+        <a href="multiply.html">Multiply</a>
+        <a href="divide.html">Divide</a>
+        <a href="index.html">Converts</a>
+    </nav>
+    <br>
+    <div class="calculator">
+        <h2>Binary Adder</h2>
+
+        <input type="text" id="binaryInput1" placeholder="Enter Binary Number 1">
+        <input type="text" id="binaryInput2" placeholder="Enter Binary Number 2">
+        <br>
+        <button onclick="addBinary()">Add</button>
+
+        <div class="results">
+            <p>Binary Sum: <span id="binarySumResult"></span></p>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h2>Octal Adder</h2>
+
+        <input type="text" id="octalInput1" placeholder="Enter Octal Number 1">
+        <input type="text" id="octalInput2" placeholder="Enter Octal Number 2">
+        <br>
+        <button onclick="addOctal()">Add</button>
+
+        <div class="results">
+            <p>Octal Sum: <span id="octalSumResult"></span></p>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h2>Hexadecimal Adder</h2>
+
+        <input type="text" id="hexInput1" placeholder="Enter Hexadecimal Number 1">
+        <input type="text" id="hexInput2" placeholder="Enter Hexadecimal Number 2">
+        <br>
+        <button onclick="addHexadecimal()">Add</button>
+
+        <div class="results">
+            <p>Hexadecimal Sum: <span id="hexSumResult"></span></p>
+        </div>
+    </div>
+
+    <script src="operationSum.js"></script>
+</body>
+</html>
