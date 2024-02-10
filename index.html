@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menuStyle.css">
     <title>Discrete Math</title>
 </head>
 <body>
@@ -11,61 +12,40 @@
         <a href="index.html" class="active">Decimales/Binarios</a>
         <a href="octal.html">Octales/Hexadecimales</a>
         <a href="IEEE.html">IEEE 754 (32 bits)/IEEE 754 (64 bits)</a>
+        <a href="suma.html">Math Operations</a>
     </nav>
-    <div>
-        <div class="calculator">
-            <h2>Calculadoras Decimales</h2>
-    
-            
-            <input type="text" id="decimalInput" placeholder="Enter decimal">
-            <button onclick="convertToBinary()">Convert to Binary</button>
-            <p id="binaryResult">Binary Result: </p>
-            <hr>
 
-            
-            <input type="text" id="decimalInput2" placeholder="Enter decimal">
-            <button onclick="convertToOctal()">Convert to Octal</button>
-            <p id="octalResult">Octal Result: </p>
-            <hr>
-      
-            <input type="text" id="decimalInput3" placeholder="Enter decimal">
-            <button onclick="convertToHexadecimal()">Convert to Hexadecimal</button>
-            <p id="hexadecimalResult">Hexadecimal Result: </p>
-            <hr>
-       
-            <input type="number" step="any" id="decimalInput4" placeholder="Enter decimal">
-            <button onclick="convertToIEEE()">Convert to IEEE 754 (32 bits)</button>
-            <p id="resultIEEE">IEEE 754 (32 bits) Result: </p>
-            <hr>
+    <div class="calculator">
+        <h2>Decimal Converter</h2>
+
+        <input type="text" id="decimalInput" placeholder="Enter Decimal Number">
+        <button onclick="convertDecimal()">Convert</button>
+
+        <div class="results">
+            <p>Binary Result: <span id="binaryResult"></span></p>
+            <p>Octal Result: <span id="octalResult"></span></p>
+            <p>Hexadecimal Result: <span id="hexResult"></span></p>
+            <p>IEEE 754 (32 bits) Result: <span id="ieee32Result"></span></p>
+            <p>IEEE 754 (64 bits) Result: <span id="ieee64Result"></span></p>
         </div>
     </div>
     
-    <div class="">
-        <div class="calculator">
-            <h2>Calculadoras Binarias</h2>
-            
-            <input type="text" id="binaryInput" placeholder="Enter binary">
-            <button onclick="binaryToDecimal()">Convert to Decimal</button>
-            <p id="decimalResult">Decimal Result: </p>
-            <hr>
-    
-            <input type="text" id="binaryInput2" placeholder="Enter binary">
-            <button onclick="binaryToOctal()">Convert to Octal</button>
-            <p id="octalResultFromBinary">Octal Result: </p>
-            <hr>
-            
-            <input type="text" id="binaryInput3" placeholder="Enter binary">
-            <button onclick="binaryToHexadecimal()">Convert to Hexadecimal</button>
-            <p id="hexadecimalResultFromBinary">Hexadecimal Result: </p>
-            <hr>
-            
-            <input type="text" id="binaryInput4" placeholder="Enter binary">
-            <button onclick="convertToIEEE754()">Convert to IEEE 754</button>
-            <p id="ieee754ResultFromBinary">IEEE 754 Result: </p>
-            <hr>
-     
+    <div class="calculator">
+        <h2>Binary Converter</h2>
+
+        <input type="text" id="binaryInputBinary" placeholder="Enter Binary Number">
+        <button onclick="convertBinary()">Convert</button>
+
+        <div class="results">
+            <p>Decimal Result: <span id="decimalResultFromBinary"></span></p>
+            <p>Octal Result: <span id="octalResultFromBinary"></span></p>
+            <p>Hexadecimal Result: <span id="hexResultFromBinary"></span></p>
+            <p>IEEE 754 (32 bits) Result: <span id="ieee32ResultFromBinary"></span></p>
+            <p>IEEE 754 (64 bits) Result: <span id="ieee64ResultFromBinary"></span></p>
         </div>
+    
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
