@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menuStyle.css">
     <title>Discrete Math</title>
 </head>
 <body>
@@ -11,54 +12,37 @@
         <a href="index.html">Decimales/Binarios</a>
         <a href="octal.html" class="active">Octales/Hexadecimales</a>
         <a href="IEEE.html">IEEE 754 (32 bits)/IEEE 754 (64 bits)</a>
+        <a href="suma.html">Math Operations</a>
     </nav>
     <br>
     <div class="calculator">
-        <h2>Calculadoras Binarias</h2>
-        
-        <input type="text" id="octalInput" placeholder="Enter octal">
-        <button onclick="octalToDecimal()">Convert to Decimal</button>
-        <p id="decimalResultFromOctal">Decimal Result: </p>
-        <hr>
+        <h2>Octal Converter</h2>
 
-        <input type="text" id="octalInput2" placeholder="Enter octal">
-        <button onclick="octalToBinary()">Convert to Binary</button>
-        <p id="binaryResultFromOctal">Binary Result: </p>
-        <hr>
+        <input type="text" id="octalInput" placeholder="Enter Octal Number">
+        <button onclick="convertOctal()">Convert</button>
 
-        <input type="text" id="octalInput3" placeholder="Enter octal">
-        <button onclick="octalToHexadecimal()">Convert to Hexadecimal</button>
-        <p id="hexadecimalResultFromOctal">Hexadecimal Result: </p>
-        <hr>
-
-        <input type="text" id="octalInput4" placeholder="Enter octal">
-        <button onclick="octalToIEEE754()">Convert to IEEE 754 (32 bits)</button>
-        <p id="ieee754ResultFromOctal">IEEE 754 Result: </p>
-        <hr>
+        <div class="results">
+            <p>Decimal Result: <span id="decimalResultFromOctal"></span></p>
+            <p>Binary Result: <span id="binaryResultFromOctal"></span></p>
+            <p>Hexadecimal Result: <span id="hexResultFromOctal"></span></p>
+            <p>IEEE 754 (32 bits) Result: <span id="ieee32ResultFromOctal"></span></p>
+            <p>IEEE 754 (64 bits) Result: <span id="ieee64ResultFromOctal"></span></p>
+        </div>
     </div>
 
     <div class="calculator">
-        <h2>Calculadoras Hexadecimales</h2>
-        
-        <input type="text" id="hexadecimalInput" placeholder="Enter hexadecimal">
-        <button onclick="hexadecimalToDecimal()">Convert to Decimal</button>
-        <p id="decimalResultFromHexadecimal">Decimal Result: </p>
-        <hr>
+        <h2>Hexadecimal Converter</h2>
 
-        <input type="text" id="hexadecimalInput2" placeholder="Enter hexadecimal">
-        <button onclick="hexadecimalToBinary()">Convert to Binary</button>
-        <p id="binaryResultFromHexadecimal">Binary Result: </p>
-        <hr>
+        <input type="text" id="hexInput" placeholder="Enter Hexadecimal Number">
+        <button onclick="convertHexadecimal()">Convert</button>
 
-        <input type="text" id="hexadecimalInput3" placeholder="Enter hexadecimal">
-        <button onclick="hexadecimalToOctal()">Convert to Octal</button>
-        <p id="octalResultFromHexadecimal">Octal Result: </p>
-        <hr>
-
-        <input type="text" id="hexadecimalInput4" placeholder="Enter hexadecimal">
-        <button onclick="hexadecimalToIEEE754()">Convert to IEEE 754 (32 bits)</button>
-        <p id="ieee754ResultFromHexadecimal">IEEE 754 Result: </p>
-        <hr>
+        <div class="results">
+            <p>Decimal Result: <span id="decimalResultFromHex"></span></p>
+            <p>Binary Result: <span id="binaryResultFromHex"></span></p>
+            <p>Octal Result: <span id="octalResultFromHex"></span></p>
+            <p>IEEE 754 (32 bits) Result: <span id="ieee32ResultFromHex"></span></p>
+            <p>IEEE 754 (64 bits) Result: <span id="ieee64ResultFromHex"></span></p>
+        </div>
     </div>
     
     <script src="script.js"></script>
