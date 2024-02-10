@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menuStyle.css">
     <title>Discrete Math</title>
 </head>
 <body>
@@ -11,15 +12,14 @@
         <a href="index.html">Decimales/Binarios</a>
         <a href="octal.html">Octales/Hexadecimales</a>
         <a href="IEEE.html" class="active">IEEE 754 (32 bits)/IEEE 754 (64 bits)</a>
+        <a href="suma.html">Math Operations</a>
     </nav>
     <br>
     <div class="calculator">
         <h2>IEEE 754 Calculator (32 bits)</h2>
 
-        <label for="ieeeInput">IEEE 754 (32 bits):</label>
         <input type="text" id="ieeeInput8" placeholder="Enter IEEE 754 (32 bits)">
-
-        <button onclick="convert32IEEE754()">Convert</button>
+        <button onclick="convertIEEE754()">Convert</button>
 
         <div class="results">
             <p>Decimal Result: <span id="decimalResultFromIEEE"></span></p>
@@ -32,10 +32,8 @@
     <div class="calculator">
         <h2>IEEE 754 Calculator (64 bits)</h2>
 
-        <label for="ieeeInput64">IEEE 754 (64 bits):</label>
         <input type="text" id="ieeeInput64" placeholder="Enter IEEE 754 (64 bits)">
-
-        <button onclick="convert64IEEE754()">Convert</button>
+        <button onclick="convertIEEE754()">Convert</button>
 
         <div class="results">
             <p>Decimal Result: <span id="decimalResult64"></span></p>
