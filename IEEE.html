@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>IEEE 754 Calculator</title>
+    <title>Discrete Math</title>
 </head>
 <body>
     <nav class="menu">
@@ -14,13 +14,36 @@
     </nav>
     <br>
     <div class="calculator">
-        <br>
-        <h2>IEEE 754 Binary (32 bits)</h2>
-        <label for="ieeeInput">IEEE 754 Binary (32 bits):</label>
-        <br>
-        <input type="text" id="ieeeInput" maxlength="32" placeholder="Enter binary">
-        <button onclick="convertToDecimal()">Convert to Decimal</button>
-        <p id="result">Decimal Result: </p>
+        <h2>IEEE 754 Calculator (32 bits)</h2>
+
+        <label for="ieeeInput">IEEE 754 (32 bits):</label>
+        <input type="text" id="ieeeInput8" placeholder="Enter IEEE 754 (32 bits)">
+
+        <button onclick="convertIEEE754()">Convert</button>
+
+        <div class="results">
+            <p>Decimal Result: <span id="decimalResultFromIEEE"></span></p>
+            <p>Binary Result: <span id="binaryResultFromIEEE"></span></p>
+            <p>Octal Result: <span id="octalResultFromIEEE"></span></p>
+            <p>Hexadecimal Result: <span id="hexResultFromIEEE"></span></p>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h2>IEEE 754 Calculator (64 bits)</h2>
+
+        <label for="ieeeInput64">IEEE 754 (64 bits):</label>
+        <input type="text" id="ieeeInput64" placeholder="Enter IEEE 754 (64 bits)">
+
+        <button onclick="convertIEEE754()">Convert</button>
+
+        <div class="results">
+            <p>Decimal Result: <span id="decimalResult64"></span></p>
+            <p>Binary Result: <span id="binaryResult64"></span></p>
+            <p>Octal Result: <span id="octalResult64"></span></p>
+            <p>Hexadecimal Result: <span id="hexResult64"></span></p>
+            <p>IEEE 754 (32 bits) Result: <span id="ieee32Result"></span></p>
+        </div>
     </div>
     
     <script src="script.js"></script>
