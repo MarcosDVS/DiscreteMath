@@ -259,7 +259,7 @@ function hexadecimalToIEEE754() {
 }
 
 //IEEE 754 (32 bits) to others
-function convertIEEE754() {
+function convert32IEEE754() {
     var ieeeInput = document.getElementById("ieeeInput8").value;
 
     // Asegúrate de que la entrada sea un número binario válido de 32 bits
@@ -296,7 +296,7 @@ function ieee754ToDecimal(ieeeInput) {
 }
 
 //IEEE 754 (64 bits) to others
-function convertIEEE754() {
+function convert64IEEE754() {
     var ieeeInput = document.getElementById("ieeeInput64").value;
 
     // Asegúrate de que la entrada sea un número binario válido de 64 bits
