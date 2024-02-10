@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="menuStyle.css">
+    <title>Discrete Math</title>
+</head>
+<body>
+    <nav class="menu">
+        <a href="suma.html">Sum</a>
+        <a href="subtract.html" class="active">Subtract</a>
+        <a href="multiply.html">Multiply</a>
+        <a href="divide.html">Divide</a>
+        <a href="index.html">Converts</a>
+    </nav>
+    <br>
+
+    <div class="calculator">
+        <h2>Binary Subtractor</h2>
+
+        <input type="text" id="binaryInput1" placeholder="Enter Binary Number 1">
+        <input type="text" id="binaryInput2" placeholder="Enter Binary Number 2">
+        <br>
+        <button onclick="subtractBinary()">Subtract</button>
+
+        <div class="results">
+            <p>Binary Result: <span id="binarySubtractResult"></span></p>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h2>Octal Subtractor</h2>
+
+        <input type="text" id="octalInput1" placeholder="Enter Octal Number 1">
+        <input type="text" id="octalInput2" placeholder="Enter Octal Number 2">
+        <br>
+        <button onclick="subtractOctal()">Subtract</button>
+
+        <div class="results">
+            <p>Octal Result: <span id="octalSubtractResult"></span></p>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h2>Hexadecimal Subtractor</h2>
+
+        <input type="text" id="hexInput1" placeholder="Enter Hexadecimal Number 1">
+        <input type="text" id="hexInput2" placeholder="Enter Hexadecimal Number 2">
+        <br>
+        <button onclick="subtractHexadecimal()">Subtract</button>
+
+        <div class="results">
+            <p>Hexadecimal Result: <span id="hexSubtractResult"></span></p>
+        </div>
+    </div>
+
+    <script src="operationSubtract.js"></script>
+</body>
+</html>
