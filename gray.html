@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menuStyle.css">
+    <title>Discrete Math</title>
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html" class="active">Decimales/Binarios</a>
+        <a href="octal.html">Octales/Hexadecimales</a>
+        <a href="IEEE.html">IEEE 754 (32 bits)/IEEE 754 (64 bits)</a>
+        <a href="gray.html">Gray</a>
+        <a href="suma.html">Math Operations</a>
+    </nav>
+
+    <div class="calculator">
+        <h2>Gray Code Converter</h2>
+
+        <input type="text" id="grayInput" placeholder="Enter Gray Code">
+        <button onclick="convertGray()">Convert</button>
+
+        <div class="results">
+            <p>Binary Result: <span id="binaryResult"></span></p>
+            <p>Decimal Result: <span id="decimalResult"></span></p>
+            <p>Octal Result: <span id="octalResult"></span></p>
+            <p>Hexadecimal Result: <span id="hexResult"></span></p>
+            <p>IEEE 754 (32 bits) Result: <span id="ieee32Result"></span></p>
+            <p>IEEE 754 (64 bits) Result: <span id="ieee64Result"></span></p>
+        </div>
+    </div>
+
+    <script src="gray.js"></script>
+</body>
+</html>
