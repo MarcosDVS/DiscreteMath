@@ -285,7 +285,7 @@ function convertHexadecimal() {
 }
 
 //IEEE 754 (32 bits) to others
-function convertIEEE754() {
+function convertIEEE75432() {
     var ieeeInput = document.getElementById("ieeeInput8").value;
 
     // Asegúrate de que la entrada sea un número binario válido de 32 bits
