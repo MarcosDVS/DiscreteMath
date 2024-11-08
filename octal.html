@@ -4,48 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="menuStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Discrete Math</title>
 </head>
 <body>
-    <nav class="menu">
-        <a href="index.html">Decimales/Binarios</a>
-        <a href="octal.html" class="active">Octales/Hexadecimales</a>
-        <a href="IEEE.html">IEEE 754 (32 bits)/IEEE 754 (64 bits)</a>
-        <a href="gray.html">Gray</a>
-        <a href="suma.html">Math Operations</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Decimales/Binarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="octal.html">Octales/Hexadecimales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="IEEE.html">IEEE 754</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gray.html">Gray</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suma.html">Math Operations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <br>
-    <div class="calculator">
-        <h2>Octal Converter</h2>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <!-- Octal Converter -->
+            <div class="col-md-6 mb-4">
+                <div class="calculator card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title mb-0">Octal Converter</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="octalInput" placeholder="Enter Octal Number">
+                            <button class="btn btn-primary" onclick="convertOctal()">Convert</button>
+                        </div>
+                        <div class="results">
+                            <div class="result-item">
+                                <label class="fw-bold">Decimal:</label>
+                                <span id="decimalResultFromOctal" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <label class="fw-bold">Binary:</label>
+                                <span id="binaryResultFromOctal" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <label class="fw-bold">Hexadecimal:</label>
+                                <span id="hexResultFromOctal" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <label class="fw-bold">IEEE 754 (32 bits):</label>
+                                <span id="ieee32ResultFromOctal" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <label class="fw-bold">IEEE 754 (64 bits):</label>
+                                <span id="ieee64ResultFromOctal" class="result-value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <input type="text" id="octalInput" placeholder="Enter Octal Number">
-        <button onclick="convertOctal()">Convert</button>
-
-        <div class="results">
-            <p>Decimal Result: <span id="decimalResultFromOctal"></span></p>
-            <p>Binary Result: <span id="binaryResultFromOctal"></span></p>
-            <p>Hexadecimal Result: <span id="hexResultFromOctal"></span></p>
-            <p>IEEE 754 (32 bits) Result: <span id="ieee32ResultFromOctal"></span></p>
-            <p>IEEE 754 (64 bits) Result: <span id="ieee64ResultFromOctal"></span></p>
+            <!-- Hexadecimal Converter -->
+            <div class="col-md-6 mb-4">
+                <div class="calculator card shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h3 class="card-title mb-0">Hexadecimal Converter</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="hexInput" placeholder="Enter Hexadecimal Number">
+                            <button class="btn btn-secondary" onclick="convertHexadecimal()">Convert</button>
+                        </div>
+                        <div class="results">
+                            <div class="result-item">
+                                <label class="fw-bold">Decimal:</label>
+                                <span id="decimalResultFromHex" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <label class="fw-bold">Binary:</label>
+                                <span id="binaryResultFromHex" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <label class="fw-bold">Octal:</label>
+                                <span id="octalResultFromHex" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <label class="fw-bold">IEEE 754 (32 bits):</label>
+                                <span id="ieee32ResultFromHex" class="result-value"></span>
+                            </div>
+                            <div class="result-item">
+                                <label class="fw-bold">IEEE 754 (64 bits):</label>
+                                <span id="ieee64ResultFromHex" class="result-value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="calculator">
-        <h2>Hexadecimal Converter</h2>
-
-        <input type="text" id="hexInput" placeholder="Enter Hexadecimal Number">
-        <button onclick="convertHexadecimal()">Convert</button>
-
-        <div class="results">
-            <p>Decimal Result: <span id="decimalResultFromHex"></span></p>
-            <p>Binary Result: <span id="binaryResultFromHex"></span></p>
-            <p>Octal Result: <span id="octalResultFromHex"></span></p>
-            <p>IEEE 754 (32 bits) Result: <span id="ieee32ResultFromHex"></span></p>
-            <p>IEEE 754 (64 bits) Result: <span id="ieee64ResultFromHex"></span></p>
-        </div>
-    </div>
-    
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
